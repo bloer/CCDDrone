@@ -30,7 +30,8 @@ int main( int argc, char **argv )
     
     std::cout << "This code will power on the leach and apply the clock and bias voltages.\n"
               << "Then it will perform an erase procedure.\n"
-              << "The process starts in 10 seconds. Please ensure that the Leach is switched ON.\n";
+              << "The process starts in 10 seconds. Please ensure that the Leach is switched ON."
+              << std::endl;
 
     std::this_thread::sleep_for(std::chrono::seconds(10));
 
@@ -56,7 +57,7 @@ int main( int argc, char **argv )
 
 
 	/*Erase procedure*/
-	std::cout<<"Set IDLE clocks to ON and then start erase procedure in 5 seconds.\n";
+	std::cout<<"Set IDLE clocks to ON and then start erase procedure in 5 seconds." << std::endl;
     _ThisRunControllerInstance.IdleClockToggle();
     std::this_thread::sleep_for(std::chrono::seconds(5));
     _ThisRunControllerInstance.PerformEraseProcedure();

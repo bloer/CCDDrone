@@ -103,15 +103,15 @@ void LeachController::PerformEraseProcedure(void)
     std::cout<<"Setting pixel array to (9V,9V)\n";
     this->ApplyAllPositiveVPixelArray();
 
-    std::cout<<"Switching Vsub / relay OFF (pin 11) and wait 5 seconds.\n";
+    std::cout<<"Switching Vsub / relay OFF (pin 11) and wait 5 seconds." << std::endl;
     this->CCDBiasToggle(0);
     std::this_thread::sleep_for(std::chrono::seconds(5));
 
-    std::cout<<"Switch Vsub / relay ON (pin 11). After 5 seconds, the clock voltages will be restored.\n";
+    std::cout<<"Switch Vsub / relay ON (pin 11). After 5 seconds, the clock voltages will be restored." << std::endl;
     this->CCDBiasToggle(1);
     std::this_thread::sleep_for(std::chrono::seconds(5));
     this->RestoreVClockVoltages();
-    std::cout<<"Clock voltages restored. Erase procedure is now complete.\n";
+    std::cout<<"Clock voltages restored. Erase procedure is now complete." << std::endl;
 
 }
 

@@ -87,7 +87,7 @@ void LeachController::PrepareAndExposeCCD(int ExposureTime, unsigned short *Imag
 
         std::cout<<"Turning VDD OFF before exposure.\n";
         this->ToggleVDD(0);
-        std::cout << "Starting exposure\n";
+        std::cout << "Starting exposure" << std::endl;
         this->ExposeCCD(ExposureTime, false, &cExposeListener);
         this->ClockTimers.ReadoutEnd = std::chrono::system_clock::now();
         this->ReadoutProgress.done();

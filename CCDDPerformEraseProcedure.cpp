@@ -29,7 +29,7 @@ int main( int argc, char **argv )
 
     
     std::cout << "This code will perform an erase procedure.\n"
-              << "The process starts in 10 seconds.\n";
+              << "The process starts in 10 seconds." <<std::endl;
 
     std::this_thread::sleep_for(std::chrono::seconds(10));
 
