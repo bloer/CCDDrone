@@ -54,6 +54,9 @@ target_link_libraries( CCDDStartupAndErase -lCArcDeinterlace -lCArcDevice LeachC
 add_executable( CCDDPerformEraseProcedure CCDDPerformEraseProcedure.cpp)
 target_link_libraries( CCDDPerformEraseProcedure -lCArcDeinterlace -lCArcDevice LeachController -lcurl ${CFITSIO_LIBRARIES})
 
+add_executable( CCDDToggleBias CCDDToggleBias.cpp)
+target_link_libraries( CCDDToggleBias -lCArcDeinterlace -lCArcDevice LeachController -lcurl ${CFITSIO_LIBRARIES})
+
 add_executable( CCDDApplyNewSettings CCDDApplyNewSettings.cpp)
 target_link_libraries( CCDDApplyNewSettings -lCArcDeinterlace -lCArcDevice LeachController -lcurl ${CFITSIO_LIBRARIES} )
 
