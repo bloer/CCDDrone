@@ -7,10 +7,12 @@ Makefile
 *.fits
 *.layout
 .DS_Store
+*~
 
 CCDDrone/CCDDrone
 do_not_touch/LastHashes.txt
 do_not_touch/LastSettings.ini
+do_not_touch/LastConfigLocation.txt
 
 # but do track lib.a, even though you're ignoring .a files above
 #!lib.a
@@ -26,3 +28,14 @@ CMakeFiles/
 
 # ignore all .pdf files in the doc/ directory and any of its subdirectories
 #doc/**/*.pdf
+
+#ignore executables and shared libraries
+CCDDApplyNewSettings
+CCDDExpose
+CCDDPerformEraseProcedure
+CCDDStartupAndErase
+CCDDToggleBias
+libLeachController.so
+
+#ignore arc debug files
+CArcDevice_Debug.txt
