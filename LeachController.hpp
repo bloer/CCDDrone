@@ -161,6 +161,7 @@ public:
     void ApplyAllPositiveVPixelArray(void );
     void RestoreVClockVoltages (void);
     void IdleClockToggle(void );
+    void SetMultiplexers(int mux1, int mux2);
     void ApplyNewSequencer(std::string );
     int ApplyNewIntegralTimeAndGain(double, int );
     int ApplyNewPedestalIntegralWait(double );

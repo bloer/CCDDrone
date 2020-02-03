@@ -49,6 +49,9 @@ void LeachController::ParseCCDSettings(CCDVariables &_CCDSettings, ClockVariable
     _clockSettings.sw_lo = _LeachConfig.GetReal("clocks", "sw_lo", -4);
     _clockSettings.og_hi = _LeachConfig.GetReal("clocks", "og_hi", 2);
     _clockSettings.og_lo = _LeachConfig.GetReal("clocks", "og_lo", -2);
+    
+    _clockSettings.mux1 = _LeachConfig.GetInteger("clocks", "mux1", 1);
+    _clockSettings.mux2 = _LeachConfig.GetInteger("clocks", "mux2", 2);
 
     /*CCD Specific settings*/
     _CCDSettings.CCDType = _LeachConfig.Get("ccd", "type", "DES");

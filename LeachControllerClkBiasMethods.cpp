@@ -156,3 +156,8 @@ void LeachController::IdleClockToggle (void )
 
 }
 
+/* set the multiplexer output */
+void LeachController::SetMultiplexers(int mux1, int mux2)
+{
+	this->pArcDev->Command(TIM_ID, SMX, CLOCK_JUMPER, mux1, mux2);
+}

@@ -112,6 +112,8 @@ void LeachController::ApplyAllCCDClocks(void )
     this->SetDACValueClock(15, this->ClockParams.u_hclock_lo, this->ClockParams.u_hclock_hi); //Channel 15: H1U
     this->SetDACValueClock(16, this->ClockParams.u_hclock_lo, this->ClockParams.u_hclock_hi); //Channel 16: H2U
     this->SetDACValueClock(17, this->ClockParams.u_hclock_lo, this->ClockParams.u_hclock_hi); //Channel 17: H3U
+    
+    this->SetMultiplexers(this->ClockParams.mux1, this->ClockParams.mux2);
 
     /*These parameters do change between boards */
     if (this->CCDParams.SecondStageVersion == "UW1") {

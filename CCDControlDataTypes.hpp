@@ -66,6 +66,8 @@ struct ClockVariables{
     double og_hi;
     double og_lo;
 
+	int mux1;
+	int mux2;
 };
 
 
